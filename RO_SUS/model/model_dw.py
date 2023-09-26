@@ -18,14 +18,12 @@ class DiseaseDimension(Model):
 
 class EstablishmentsDimension(BaseModel):
     cnes_id = PrimaryKeyField()
-    cnes_cep = CharField()
-    cnes_turn = FloatField(null=True)
     cnes_urgency = CharField()
     outpatient_care = CharField()
     surgery_center = CharField()
     obstetric_center = CharField()
     neonatal_center = CharField()
-    hopital_care = CharField()
+    hospital_care = CharField()
     own_social_service = CharField()
     third_social_service = CharField()
     own_pharmacy = CharField()
