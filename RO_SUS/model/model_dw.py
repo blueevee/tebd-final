@@ -1,0 +1,108 @@
+from peewee import Model, CharField, SmallIntegerField, FloatField, PrimaryKeyField, ForeignKeyField
+
+from RO_SUS.config import database
+
+
+class BaseModel(Model):
+    class Meta:
+        database = database
+
+class CityDimension(Model):
+    city_id = PrimaryKeyField()
+    city_name = CharField(unique=True)
+    topology = CharField()
+
+class DiseaseDimension(Model):
+    cid_id = PrimaryKeyField()
+    cid_name = CharField(unique=True)
+
+class EstablishmentsDimension(BaseModel):
+    cnes_id = PrimaryKeyField()
+    cnes_cep = CharField()
+    cnes_turn = FloatField(null=True)
+    cnes_urgency = CharField()
+    outpatient_care = CharField()
+    surgery_center = CharField()
+    obstetric_center = CharField()
+    neonatal_center = CharField()
+    hopital_care = CharField()
+    own_social_service = CharField()
+    third_social_service = CharField()
+    own_pharmacy = CharField()
+    third_pharmacy = CharField()
+    own_sterilization_materials = CharField()
+    third_sterilization_materials = CharField()
+    own_nutrition = CharField()
+    third_nutrition = CharField()
+    own_lactarian = CharField()
+    third_lactarian = CharField()
+    own_milk_bank = CharField()
+    third_milk_bank = CharField()
+    own_laudry = CharField()
+    third_laudry = CharField()
+    own_maintence = CharField()
+    third_maintence = CharField()
+    own_ambulance = CharField()
+    third_ambulance = CharField()
+    own_morgue = CharField()
+    third_morgue = CharField()
+    biological_waste_collection = CharField()
+    chemical_waste_collection = CharField()
+    radioactive_waste_collection = CharField()
+    medical_ethics = CharField()
+    nursing_ethics = CharField()
+    hospital_infection_control = CharField()
+    death_analysis = CharField()
+    disease_notification = CharField()
+    zoonoses_control = CharField()
+    sus_hospitalization = CharField()
+    sus_ambulatory_care = CharField()
+    sus_sadt = CharField()
+    sus_urgency = CharField()
+    sus_others = CharField()
+    sus_regulation = CharField()
+
+class ProcedureDimension(BaseModel):
+    proc_id =  PrimaryKeyField()
+    proc_name = CharField(unique=True)
+    sex = CharField()
+    min_age = SmallIntegerField()
+    max_age = SmallIntegerField()
+    vlr_sp = FloatField()
+    max_quantity = SmallIntegerField()
+    points = SmallIntegerField()
+    stay_duration = SmallIntegerField()
+    complexity = CharField()
+    cofunding = CharField()
+
+class HospitalizationFact(Model):
+    aih_number = PrimaryKeyField()
+    aih_year = CharField()
+    aih_month = CharField()
+    specialty = CharField()
+    birth_date = CharField()
+    patient_sex = CharField()
+    daily_uti = SmallIntegerField()
+    requested_procedure = ForeignKeyField(ProcedureDimension, backref='requested_procedure')
+    procedure_performed = ForeignKeyField(ProcedureDimension, backref='procedure_performed')
+    services_cost = FloatField()
+    professionals_cost = FloatField()
+    total_cost = FloatField()
+    main_diagnostic = ForeignKeyField(DiseaseDimension, backref='diagnostic')
+    city_id = ForeignKeyField(CityDimension, backref='local')
+    death = CharField()
+    nationality = CharField()
+    childrem = SmallIntegerField()
+    education_level = CharField()
+    birth_controll = CharField()
+    risk_pregnancy = CharField()
+    cnes_id = ForeignKeyField(EstablishmentsDimension, backref='establishment')
+    associated_cid = ForeignKeyField(DiseaseDimension, backref='associated_diagnostic')
+    death_cid = ForeignKeyField(DiseaseDimension, backref='death_cause')
+    color = CharField()
+
+
+database.connect()
+# # database.create_tables([Cid, Cities, Procedure, Establishments, Hospitalizations])
+database.create_tables([Establishments])
+database.close()

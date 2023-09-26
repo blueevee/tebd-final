@@ -1,53 +1,53 @@
 COD,NOME,TOPOLOGIA
-1100015,Alta Floresta D'oeste,2
-1100023,Ariquemes,1
-1100031,Cabixi,4
-1100049,Cacoal,1
-1100056,Cerejeiras,1
-1100064,Colorado do Oeste,2
-1100072,Corumbiara,5
-1100080,Costa Marques,5
-1100098,Espigão D'oeste,2
-1100106,Guajará-Mirim,1
-1100114,Jaru,1
-1100122,Ji-Paraná,1
-1100130,Machadinho D'oeste,5
-1100148,Nova Brasilândia D'oeste,4
-1100155,Ouro Preto do Oeste,1
-1100189,Pimenta Bueno,1
-1100205,Porto Velho,1
-1100254,Presidente Médici,1
-1100262,Rio Crespo,4
-1100288,Rolim de Moura,1
-1100296,Santa Luzia D'oeste,4
-1100304,Vilhena,1
-1100320,São Miguel do Guaporé,5
-1100338,Nova Mamoré,5
-1100346,Alvorada D'oeste,4
-1100379,Alto Alegre dos Parecis,4
-1100403,Alto Paraíso,4
-1100452,Buritis,3
-1100502,Novo Horizonte do Oeste,4
-1100601,Cacaulândia,4
-1100700,Campo Novo de Rondônia,4
-1100809,Candeias do Jamari,1
-1100908,Castanheiras,4
-1100924,Chupinguaia,5
-1100940,Cujubim,2
-1101005,Governador Jorge Teixeira,4
-1101104,Itapuã do Oeste,4
-1101203,Ministro Andreazza,4
-1101302,Mirante da Serra,4
-1101401,Monte Negro,4
-1101435,Nova União,4
-1101450,Parecis,4
-1101468,Pimenteiras do Oeste,5
-1101476,Primavera de Rondônia,4
-1101484,São Felipe D'oeste,4
-1101492,São Francisco do Guaporé,5
-1101500,Seringueiras,5
-1101559,Teixeirópolis,4
-1101609,Theobroma,4
-1101708,Urupá,4
-1101757,Vale do Anari,5
-1101807,Vale do Paraíso,4
+110001,Alta Floresta D'oeste,2
+110002,Ariquemes,1
+110003,Cabixi,4
+110004,Cacoal,1
+110005,Cerejeiras,1
+110006,Colorado do Oeste,2
+110007,Corumbiara,5
+110008,Costa Marques,5
+110009,Espigão D'oeste,2
+110010,Guajará-Mirim,1
+110011,Jaru,1
+110012,Ji-Paraná,1
+110013,Machadinho D'oeste,5
+110014,Nova Brasilândia D'oeste,4
+110015,Ouro Preto do Oeste,1
+110018,Pimenta Bueno,1
+110020,Porto Velho,1
+110025,Presidente Médici,1
+110026,Rio Crespo,4
+110028,Rolim de Moura,1
+110029,Santa Luzia D'oeste,4
+110030,Vilhena,1
+110032,São Miguel do Guaporé,5
+110033,Nova Mamoré,5
+110034,Alvorada D'oeste,4
+110037,Alto Alegre dos Parecis,4
+110040,Alto Paraíso,4
+110045,Buritis,3
+110050,Novo Horizonte do Oeste,4
+110060,Cacaulândia,4
+110070,Campo Novo de Rondônia,4
+110080,Candeias do Jamari,1
+110090,Castanheiras,4
+110092,Chupinguaia,5
+110094,Cujubim,2
+110100,Governador Jorge Teixeira,4
+110110,Itapuã do Oeste,4
+110120,Ministro Andreazza,4
+110130,Mirante da Serra,4
+110140,Monte Negro,4
+110143,Nova União,4
+110145,Parecis,4
+110146,Pimenteiras do Oeste,5
+110147,Primavera de Rondônia,4
+110148,São Felipe D'oeste,4
+110149,São Francisco do Guaporé,5
+110150,Seringueiras,5
+110155,Teixeirópolis,4
+110160,Theobroma,4
+110170,Urupá,4
+110175,Vale do Anari,5
+110180,Vale do Paraíso,4
