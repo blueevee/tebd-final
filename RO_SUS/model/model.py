@@ -1,0 +1,113 @@
+from peewee import Model, TextField, CharField, SmallIntegerField, FloatField
+
+from RO_SUS.config import database
+
+
+class BaseModel(Model):
+    class Meta:
+        database = database
+
+
+class Cid(BaseModel):
+    cid_id = TextField()
+    cid_description = TextField()
+
+class Cities(BaseModel):
+    city_id = TextField()
+    city_name = TextField()
+
+class Procedure(BaseModel):
+    proc_id = TextField()
+    proc_name = TextField()
+    sex = CharField()
+    min_age = SmallIntegerField()
+    max_age = SmallIntegerField()
+    vlr_sp = SmallIntegerField()
+    max_quantity = SmallIntegerField()
+    points = SmallIntegerField()
+    points = SmallIntegerField()
+    stay_duration = SmallIntegerField()
+    complexity = CharField()
+    cofunding = CharField()
+
+class Establishments(BaseModel):
+    cnes_id = TextField()
+    cnes_cep = TextField()
+    cnes_turn = FloatField(null=True)
+    cnes_urgency = CharField()
+    outpatient_care = CharField()
+    surgery_center = CharField()
+    obstetric_center = CharField()
+    neonatal_center = CharField()
+    hopital_care = CharField()
+    own_social_service = CharField()
+    third_social_service = CharField()
+    own_pharmacy = CharField()
+    third_pharmacy = CharField()
+    own_sterilization_materials = CharField()
+    third_sterilization_materials = CharField()
+    own_nutrition = CharField()
+    third_nutrition = CharField()
+    own_lactarian = CharField()
+    third_lactarian = CharField()
+    own_milk_bank = CharField()
+    third_milk_bank = CharField()
+    own_laudry = CharField()
+    third_laudry = CharField()
+    own_maintence = CharField()
+    third_maintence = CharField()
+    own_ambulance = CharField()
+    third_ambulance = CharField()
+    own_morgue = CharField()
+    third_morgue = CharField()
+    biological_waste_collection = CharField()
+    chemical_waste_collection = CharField()
+    radioactive_waste_collection = CharField()
+    medical_ethics = CharField()
+    nursing_ethics = CharField()
+    hospital_infection_control = CharField()
+    death_analysis = CharField()
+    disease_notification = CharField()
+    zoonoses_control = CharField()
+    sus_hospitalization = CharField()
+    sus_ambulatory_care = CharField()
+    sus_sadt = CharField()
+    sus_urgency = CharField()
+    sus_others = CharField()
+    sus_regulation = CharField()
+
+class Hospitalizations(BaseModel):
+    aih_year = TextField()
+    aih_month = TextField()
+    specialty = CharField()
+    aih_number = TextField()
+    aih_type = CharField()
+    patient_cep = TextField()
+    birth_date = TextField()
+    patient_sex = CharField()
+    uti_days = SmallIntegerField()
+    uti_brand = CharField()
+    daily_uti = SmallIntegerField()
+    daily_hospitalization = SmallIntegerField()
+    requested_procedure = TextField()
+    procedure_performed = TextField()
+    services_cost = FloatField()
+    professionals_cost = FloatField()
+    total_cost = FloatField()
+    uti_cost = FloatField()
+    main_diagnosis = TextField()
+    city_code = TextField()
+    stay_days = SmallIntegerField()
+    death = CharField()
+    nationality = TextField()
+    childrem = SmallIntegerField()
+    education_level = CharField()
+    birth_controll = CharField()
+    risk_pregnancy = CharField()
+    cnes_code = TextField()
+
+
+database.connect()
+# # database.create_tables([Cid, Cities, Procedure, Establishments, Hospitalizations])
+database.create_tables([Establishments])
+database.close()
